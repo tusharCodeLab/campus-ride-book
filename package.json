@@ -1,0 +1,26 @@
+{
+  "name": "campus-ride-book",
+  "version": "1.0.0",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tusharCodeLab/campus-ride-book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tusharCodeLab/campus-ride-book/issues"
+  },
+  "homepage": "https://github.com/tusharCodeLab/campus-ride-book#readme",
+  "description": "",
+  "dependencies": {
+    "jsonfile": "^6.2.0",
+    "moment": "^2.30.1",
+    "random": "^5.4.1",
+    "simple-git": "^3.32.3"
+  }
+}
