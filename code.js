@@ -14,14 +14,13 @@ const makeCommit = async (n) => {
     return;
   }
 
-  // commit range
-  const start = moment("2025-11-01");
-  const end = moment("2026-02-28");
+  // commit range: Feb–Mar 2026
+  const start = moment("2026-02-01");
+  const end = moment("2026-03-31");
 
-  // total days between
   const diff = end.diff(start, "days");
 
-  // random day
+  // pick random day
   const randomDay = random.int(0, diff);
 
   const date = start
@@ -35,14 +34,10 @@ const makeCommit = async (n) => {
   console.log(`📅 Commit #${n}: ${date}`);
 
   await jsonfile.writeFile(FILE_PATH, data);
-
   await git.add(FILE_PATH);
+  await git.commit(date, { "--date": date });
 
-  await git.commit(date, {
-    "--date": date
-  });
-
-  makeCommit(n - 1);
+  makeCommit(n - 1);//kk
 };
 
 makeCommit(100);
