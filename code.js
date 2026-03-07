@@ -26,7 +26,7 @@ const makeCommits = async () => {
     const date = getRandomDateLastYear();
 
     // random commits on this date (1–7)
-    const commitsToday = random.int(1, 7);
+    const commitsToday = random.int(1, 4);
 
     console.log(`\n📅 Date ${i}: ${date.format("YYYY-MM-DD")} → ${commitsToday} commits`);
 
